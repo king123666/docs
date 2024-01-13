@@ -6,7 +6,7 @@ node_modules
 cache
 .vscode
 .idea
-dist
+#dist
 # C extensions
 *.so
 
@@ -14,7 +14,7 @@ dist
 .Python
 build/
 develop-eggs/
-dist/
+#dist/
 downloads/
 eggs/
 .eggs/
