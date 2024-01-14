@@ -24,7 +24,7 @@ export default defineConfig({
       { text: '网络爬虫', link: '/网络爬虫/接口请求工具/Requests' },
       { text: '前后端', link: '/前后端/前端/Linux上安装Nodejs' },
       { text: '人工智能', link: '/人工智能/图像/MMDetection入门基础' },
-      { text: '编程语言', link: '/编程语言/Python/Python基础语法—8小时入门版' },
+      { text: '编程语言', link: '/编程语言/Python/Linux上如何选择用pip3还是sudopip3' },
       { text: 'Linux', link: '/Linux/方案教程/Linux基础' },
       { text: '技术文档', link: '/技术文档/专利交底书/一种定位目标图片坐标的图像识别技术交底书' },
       { text: '规范文档', link: '/规范文档/流程规范/测试单驱动自动化' },
@@ -35,23 +35,11 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    ignoreDeadLinks: [
-      // 忽略精确网址 "/playground"
-      '/playground',
-      // 忽略所有 localhost 链接
-      /^https?:\/\/localhost/,
-      // 忽略所有包含 "/repl/" 的链接
-      /\/repl\//,
-      '/index\.html',
-      // 自定义函数，忽略所有包含 "ignore "的链接
-      (url) => {
-        return url.toLowerCase().includes('ignore')
-      }
-    ],
+    ignoreDeadLinks: true,
     // =========================================================
     logo: { src: '/vitepress-logo-mini.svg', width: 24, height: 24 },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/mikigo/funny-docs' }
+      { icon: 'github', link: 'https://github.com/mikigo/docs' }
     ],
     footer: {
       copyright: `版权所有 © 2023-${new Date().getFullYear()} 统信软件`

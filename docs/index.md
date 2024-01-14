@@ -10,9 +10,9 @@ hero:
     - theme: brand
       text: 快速浏览
       link: /markdown-examples
-    - theme: alt
-      text: GitHub
-      link: https://gitee.com/mikigo/funny-docs
+#    - theme: alt
+#      text: GitHub
+#      link: https://github.com/mikigo/docs
   image:
       src: /vitepress-logo-large.webp
       alt: VitePress

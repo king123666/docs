@@ -9,10 +9,10 @@ import {
   openBlock,
   ref,
   watch
-} from "./chunk-W54K6GMO.js";
+} from "./chunk-YNXSUN57.js";
 import "./chunk-Y2F7D3TJ.js";
 
-// node_modules/.pnpm/@giscus+vue@2.4.0_vue@3.4.12/node_modules/@giscus/vue/dist/index.mjs
+// node_modules/.pnpm/@giscus+vue@2.4.0_vue@3.4.11/node_modules/@giscus/vue/dist/index.mjs
 var d = ["id", "host", "repo", "repoid", "category", "categoryid", "mapping", "term", "strict", "reactionsenabled", "emitmetadata", "inputposition", "theme", "lang", "loading"];
 var l = defineComponent({
   __name: "Giscus",
@@ -36,7 +36,7 @@ var l = defineComponent({
   setup(s) {
     const t = ref(false);
     return onMounted(() => {
-      t.value = true, import("./giscus-aTimukGI-4BPB5O7U.js");
+      t.value = true, import("./giscus-aTimukGI-XE5Z5XEW.js");
     }), (e, m) => t.value ? (openBlock(), createElementBlock("giscus-widget", {
       key: 0,
       id: e.id,
@@ -58,7 +58,7 @@ var l = defineComponent({
   }
 });
 
-// node_modules/.pnpm/vitepress-plugin-comment-with-giscus@1.1.11_vue@3.4.12/node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js
+// node_modules/.pnpm/vitepress-plugin-comment-with-giscus@1.1.11_vue@3.4.11/node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js
 var setGiscus = (props, frontmatter, defaultEnable = true) => {
   var _a;
   const defaultProps = {

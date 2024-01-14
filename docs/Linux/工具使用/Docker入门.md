@@ -272,8 +272,6 @@ PermitRootLogin yes
 service ssh restart
 ```
 
-然后就是配置 `Pycharm`，详细操作参考这里：[http://youqu-dev.uniontech.com/AT开发规范.html#id22](http://youqu-dev.uniontech.com/AT开发规范.html#id22)
-
 ### 2、TCP 连接
 
 首先，配置文件：
