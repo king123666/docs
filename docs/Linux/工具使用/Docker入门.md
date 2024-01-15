@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # Docker入门
 
-```shell
-# =============================
-# Author : mikigo
-# =============================
-```
+
 
 ## 安装
 

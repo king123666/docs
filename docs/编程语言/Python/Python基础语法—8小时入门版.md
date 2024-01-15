@@ -1,15 +1,11 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 
 # Python基础语法—8小时入门版
 
-```shell
-# =============================
-# Author : mikigo
-# =============================
-```
+
 
 ##  一、Python基础
 

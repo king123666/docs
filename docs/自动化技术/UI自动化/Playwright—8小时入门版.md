@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # Playwright—8小时入门版
 
-```shell
-# =============================
-# Author : mikigo
-# =============================
-```
+
 
 ## 一、简介
 

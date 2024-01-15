@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # 生成式AI：人工智能的未来
 
-```shell
-# =============================
-# Author : mikigo
-# =============================
-```
+
 
 ![](/生成式AI：人工智能的未来_assets/t6_cpplatform_wqo7ttcq1hqxnsysbnyxrr1691491669.jpg)
 

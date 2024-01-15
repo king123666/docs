@@ -8,12 +8,18 @@ dependencies:
   '@mermaid-js/mermaid-mindmap':
     specifier: 9.3.0
     version: 9.3.0
+  medium-zoom:
+    specifier: ^1.1.0
+    version: 1.1.0
   mermaid:
     specifier: ^9.1.0
     version: 9.1.0
   vite-plugin-vitepress-auto-sidebar:
     specifier: ^1.6.2
     version: 1.6.2(eslint@8.56.0)(typescript@5.3.3)(vite@5.0.11)(vitepress@1.0.0-rc.36)
+  vitepress-plugin-back-to-top:
+    specifier: ^1.0.1
+    version: 1.0.1(typescript@5.3.3)
   vitepress-plugin-comment-with-giscus:
     specifier: ^1.1.11
     version: 1.1.11(vue@3.4.11)
@@ -2133,6 +2139,10 @@ packages:
       mj-context-menu: 0.6.1
       speech-rule-engine: 4.0.7
 
+  /medium-zoom@1.1.0:
+    resolution: {integrity: sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==, tarball: https://registry.npmmirror.com/medium-zoom/-/medium-zoom-1.1.0.tgz}
+    dev: false
+
   /mensch@0.3.4:
     resolution: {integrity: sha512-IAeFvcOnV9V0Yk+bFhYR07O3yNina9ANIN5MoXBKYJ/RLYPurd2d0yw14MDhpr9/momp0WofT1bPUh3hkzdi/g==, tarball: https://registry.npmmirror.com/mensch/-/mensch-0.3.4.tgz}
 
@@ -2570,6 +2580,14 @@ packages:
       rollup: 4.9.5
     optionalDependencies:
       fsevents: 2.3.3
+
+  /vitepress-plugin-back-to-top@1.0.1(typescript@5.3.3):
+    resolution: {integrity: sha512-fQUzhkV6SGEmYcO56fv6Jbz5ifseAZuoi+lPDGg0c8gpMVHgqs/D1GbfX4tbvUAtuFNv4kz88wuQRK024iZ2sQ==, tarball: https://registry.npmmirror.com/vitepress-plugin-back-to-top/-/vitepress-plugin-back-to-top-1.0.1.tgz}
+    dependencies:
+      vue: 3.4.11(typescript@5.3.3)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /vitepress-plugin-comment-with-giscus@1.1.11(vue@3.4.11):
     resolution: {integrity: sha512-k2xWxCGZWBrLxC+C3OC7+LAq9nkYpulVTW0UNxS0Jq9sf568n4Tel0ufYn3MK1rxG6i4qYpKCiTeOORF7wbk8w==, tarball: https://registry.npmmirror.com/vitepress-plugin-comment-with-giscus/-/vitepress-plugin-comment-with-giscus-1.1.11.tgz}

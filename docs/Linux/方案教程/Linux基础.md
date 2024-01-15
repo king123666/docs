@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # Linux&Shell基础
 
-```shell
-# =============================
-# Author : mikigo
-# =============================
-```
+
 
 ## linux基础命令
 

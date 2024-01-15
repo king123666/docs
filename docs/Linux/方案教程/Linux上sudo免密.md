@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # Linux 上 sudo 免密
 
-```shell
-# ==================================
-# Author : mikigo
-# ==================================
-```
+
 
 
 ```shell

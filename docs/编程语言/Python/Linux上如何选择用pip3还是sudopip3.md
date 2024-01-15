@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # Linux 上如何选择用 pip3 还是 sudo pip3
 
-```shell
-# ==================================
-# Author : mikigo
-# ==================================
-```
+
 
 
 ## （1）sudo pip3

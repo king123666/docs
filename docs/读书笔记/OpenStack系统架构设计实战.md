@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # OpenStack系统架构设计实战
 
-```shell
-# =============================
-# Author : mikigo
-# =============================
-```
+
 
 ![](/OpenStack系统架构设计实战_assets/t6_YueWen_834780.jpg)
 

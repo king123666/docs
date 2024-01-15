@@ -1,5 +1,5 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # MMDetection 入门基础

@@ -5,6 +5,9 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 // https://vitepress.dev/reference/site-config
 export default withMermaid(
   defineConfig({
+    head: [
+        ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
+    ],
     vite: {
       plugins: [
         // add plugin
@@ -32,7 +35,11 @@ export default withMermaid(
         { text: '规范文档', link: '/规范文档/流程规范/测试单驱动自动化' },
         { text: '读书笔记', link: '/读书笔记/OpenStack系统架构设计实战' },
         { text: '常见问题', link: '/常见问题/node-error-01' },
-        { text: '留言', link: '/comments' },
+        { text: '留言', items:[
+            { text: '留言', link: '/comments' },
+            { text: '投稿', link: '/投稿' },
+            { text: '更新记录', link: '/release' },
+        ] },
       ],
       search: {
         provider: 'local'

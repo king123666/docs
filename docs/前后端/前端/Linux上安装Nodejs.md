@@ -1,14 +1,10 @@
 ---
-counter: True
+Author: mikigo
 ---
 
 # Linux 上安装 Nodejs
 
-```shell
-# ==================================
-# Author : mikigo
-# ==================================
-```
+
 
 
 在官网下载：https://nodejs.cn/download/current/
