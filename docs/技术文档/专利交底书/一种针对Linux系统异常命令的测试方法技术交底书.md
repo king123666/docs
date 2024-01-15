@@ -77,7 +77,7 @@ l 测试脚本内容如下：
 
 |                                                              |
 | :----------------------------------------------------------- |
-| #! /bin/bashecho True> testfile1 echo "【场景4】打印文件内容，并进行了数据处理，输出结果："cat testfile1 \| sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" echo "【场景5】打印文件内容，并进行了数据处理，但文件名输入错误，输出结果："cat testfile2 \| sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" rm -f testfile1 |
+| #! /bin/bashecho True> testfile1 echo "【场景4】打印文件内容，并进行了数据处理，输出结果："cat testfile1 \| sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" echo "【场景5】打印文件内容，并进行了数据处理，但文件名输入错误，输出结果："cat testfile2 \| sed ‘s/True/False/g’; echo -e "\n命令执行状态：$?"echo "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" rm  testfile1 |
 
 执行以上脚本结果如下：
 
@@ -99,7 +99,7 @@ l 测试脚本内容如下：
 
 |                                                              |
 | :----------------------------------------------------------- |
-| #! /bin/sh# file: examples/equality\_test.sh oneTimeSetUp() {  echo True > testfile1} # 用例1test1() {  assertTrue "cat testfile1 \| grep True"} # 用例2test2() {  assertFalse "cat testfile1 \| grep False"} # 用例3test3() {  assertFalse "cat testfile2 \| grep False"} # 用例4test4() {  assertTrue "cat testfile1 \| sed ‘s/True/False/g’"} # 用例5test5() {  assertTrue "cat testfile2 \| sed ‘s/True/False/g’"}  oneTimeTearDown() {   rm -f testfile1} # Load and run shUnit2.. ../shunit2 |
+| #! /bin/sh# file: examples/equality\_test.sh oneTimeSetUp() {  echo True > testfile1} # 用例1test1() {  assertTrue "cat testfile1 \| grep True"} # 用例2test2() {  assertFalse "cat testfile1 \| grep False"} # 用例3test3() {  assertFalse "cat testfile2 \| grep False"} # 用例4test4() {  assertTrue "cat testfile1 \| sed ‘s/True/False/g’"} # 用例5test5() {  assertTrue "cat testfile2 \| sed ‘s/True/False/g’"}  oneTimeTearDown() {   rm  testfile1} # Load and run shUnit2.. ../shunit2 |
 
 执行以上测试结果如下：
 
@@ -115,7 +115,7 @@ l 测试脚本内容如下：
 
 |                                                              |
 | :----------------------------------------------------------- |
-| #!/usr/bin/env bats setup(){  echo True > testfile1} # 用例1\@test "test1" {  run cat testfile1 \| grep True  \[ $status -eq 0  ]} # 用例2\@test "test2" {  run cat testfile1 \| grep False  \[ $status -ne 0  ]} # 用例3\@test "test3" {  run cat testfile2 \| grep False  \[ $status -ne 0  ]} # 用例4\@test "test4" {  run cat testfile1 \| sed ‘s/True/False/g’  \[ $status -ne 0  ]} # 用例5\@test "test5" {  run cat testfile2 \| sed ‘s/True/False/g’  \[ $status -ne 0  ]} teardown(){    rm -f testfile1} |
+| #!/usr/bin/env bats setup(){  echo True > testfile1} # 用例1\@test "test1" {  run cat testfile1 \| grep True  \[ $status -eq 0  ]} # 用例2\@test "test2" {  run cat testfile1 \| grep False  \[ $status -ne 0  ]} # 用例3\@test "test3" {  run cat testfile2 \| grep False  \[ $status -ne 0  ]} # 用例4\@test "test4" {  run cat testfile1 \| sed ‘s/True/False/g’  \[ $status -ne 0  ]} # 用例5\@test "test5" {  run cat testfile2 \| sed ‘s/True/False/g’  \[ $status -ne 0  ]} teardown(){    rm  testfile1} |
 
 执行测试结果如下：
 
@@ -127,7 +127,7 @@ l 测试脚本内容如下：
 
 |                                                              |
 | :----------------------------------------------------------- |
-| #!/usr/bin/env bats setup(){  echo True > testfile1} # 用例1\@test "test1" {  run grep True testfile1  \[ $status -eq 0  ]} # 用例2\@test "test2" {  run grep False testfile1  \[ $status -ne 0  ]} # 用例3\@test "test3" {  run grep False testfile2  \[ $status -ne 0  ]} teardown(){    rm -f testfile1} |
+| #!/usr/bin/env bats setup(){  echo True > testfile1} # 用例1\@test "test1" {  run grep True testfile1  \[ $status -eq 0  ]} # 用例2\@test "test2" {  run grep False testfile1  \[ $status -ne 0  ]} # 用例3\@test "test3" {  run grep False testfile2  \[ $status -ne 0  ]} teardown(){    rm  testfile1} |
 
 运行结果如下：
 
@@ -375,7 +375,7 @@ _ _
 
 |                                                              |
 | :----------------------------------------------------------- |
-| #! /bin/bash echo True > testfile1test1 () {  ......     # 省略部分为定义的用例标题、编号等  quiet "cat testfile1 \| grep True" "true" # 测试命令后传入参数"true/false"代表命令类型  Com1="${quiet\_s}" # 重新定义的状态码  Com2="${quiet\_r}" # 输出内容   Exp1="0"  Exp2="True"  assertEqual "${Com1}" "${Exp1}"  assertIn "${Exp2}" "${Com2}"} test2() {  ......  quiet "cat testfile1 \| grep False" "false"  Com1="${quiet\_s}"  Com2="${quiet\_r}"   Exp1="0"  Exp2=""  assertEqual "${Com1}" "${Exp1}"  assertEqual "${Exp2}" "${Com2}"} test3 () {  ......  quiet "cat testfile2 \| grep False" "true"  Com="${quiet\_s}"   Exp1="0"  Exp2=""  assertEqual "${Com1}" "${Exp1}"  assertEqual "${Exp2}" "${Com2}" } test4 () {  ......  quiet "cat testfile1 \| sed 's/True/False/g'" "true"  Com="${quiet\_r}"  Exp="False"  assertEqual "${Com}" "${Exp}"} test5 () {  ......  quiet "cat testfile2 \| sed 's/True/False/g'" "true"  Com="${quiet\_r}"  Exp="False"  assertEqual "${Com}" "${Exp}"} rm -f testfile1 |
+| #! /bin/bash echo True > testfile1test1 () {  ......     # 省略部分为定义的用例标题、编号等  quiet "cat testfile1 \| grep True" "true" # 测试命令后传入参数"true/false"代表命令类型  Com1="${quiet\_s}" # 重新定义的状态码  Com2="${quiet\_r}" # 输出内容   Exp1="0"  Exp2="True"  assertEqual "${Com1}" "${Exp1}"  assertIn "${Exp2}" "${Com2}"} test2() {  ......  quiet "cat testfile1 \| grep False" "false"  Com1="${quiet\_s}"  Com2="${quiet\_r}"   Exp1="0"  Exp2=""  assertEqual "${Com1}" "${Exp1}"  assertEqual "${Exp2}" "${Com2}"} test3 () {  ......  quiet "cat testfile2 \| grep False" "true"  Com="${quiet\_s}"   Exp1="0"  Exp2=""  assertEqual "${Com1}" "${Exp1}"  assertEqual "${Exp2}" "${Com2}" } test4 () {  ......  quiet "cat testfile1 \| sed 's/True/False/g'" "true"  Com="${quiet\_r}"  Exp="False"  assertEqual "${Com}" "${Exp}"} test5 () {  ......  quiet "cat testfile2 \| sed 's/True/False/g'" "true"  Com="${quiet\_r}"  Exp="False"  assertEqual "${Com}" "${Exp}"} rm  testfile1 |
 
 测试结果如下：
 

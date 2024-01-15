@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { withMermaid } from "vitepress-plugin-mermaid";
+import timeline from "vitepress-markdown-timeline";
 
 // https://vitepress.dev/reference/site-config
 export default withMermaid(
@@ -17,6 +18,11 @@ export default withMermaid(
           prefix: '.', collapsed: true
         })
       ]
+    },
+    markdown: {
+      config: (md) =>{
+        md.use(timeline)
+      }
     },
     base: '/docs/',
     lang: 'zh-CN',

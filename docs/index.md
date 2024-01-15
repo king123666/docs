@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 快速浏览
-      link: /markdown-examples
+      link: /自动化技术/自动化测试框架/Pytest从入门到起飞
 #    - theme: alt
 #      text: GitHub
 #      link: https://github.com/mikigo/docs

@@ -37,6 +37,9 @@ devDependencies:
   vitepress:
     specifier: 1.0.0-rc.36
     version: 1.0.0-rc.36(@algolia/client-search@4.22.1)(markdown-it-mathjax3@4.3.2)(search-insights@2.13.0)(typescript@5.3.3)
+  vitepress-markdown-timeline:
+    specifier: ^1.2.1
+    version: 1.2.1
 
 packages:
 
@@ -1558,6 +1561,10 @@ packages:
       lodash: 4.17.21
     dev: false
 
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.10.tgz}
+    dev: true
+
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==, tarball: https://registry.npmmirror.com/debug/-/debug-4.3.4.tgz}
     engines: {node: '>=6.0'}
@@ -2580,6 +2587,12 @@ packages:
       rollup: 4.9.5
     optionalDependencies:
       fsevents: 2.3.3
+
+  /vitepress-markdown-timeline@1.2.1:
+    resolution: {integrity: sha512-XPYl/btTcTzW+XF20ITB51L8jPjbS72tSKPcv/CHJgM+3LbBvW8Az/X7RcBTJSXDNOwCY5mGkjA7CXQtuxOKgw==, tarball: https://registry.npmmirror.com/vitepress-markdown-timeline/-/vitepress-markdown-timeline-1.2.1.tgz}
+    dependencies:
+      dayjs: 1.11.10
+    dev: true
 
   /vitepress-plugin-back-to-top@1.0.1(typescript@5.3.3):
     resolution: {integrity: sha512-fQUzhkV6SGEmYcO56fv6Jbz5ifseAZuoi+lPDGg0c8gpMVHgqs/D1GbfX4tbvUAtuFNv4kz88wuQRK024iZ2sQ==, tarball: https://registry.npmmirror.com/vitepress-plugin-back-to-top/-/vitepress-plugin-back-to-top-1.0.1.tgz}

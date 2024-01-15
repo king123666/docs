@@ -2,7 +2,8 @@
   "devDependencies": {
     "busuanzi.pure.js": "^1.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "1.0.0-rc.36"
+    "vitepress": "1.0.0-rc.36",
+    "vitepress-markdown-timeline": "^1.2.1"
   },
   "scripts": {
     "dev": "vitepress dev docs",
