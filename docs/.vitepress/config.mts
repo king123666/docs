@@ -59,16 +59,14 @@ export default withMermaid(
       footer: {
         copyright: `版权所有 © 2023-${new Date().getFullYear()} 统信软件`
       },
-      // mermaid: {
-      //   // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
-      // },
+      //大纲显示2-3级标题
+      outline:[2,4],
+      //大纲顶部标题
+      outlineTitle:'当前页大纲',
+
       docFooter: {
         prev: '上一页',
         next: '下一页'
-      },
-
-      outline: {
-        label: '页面导航'
       },
 
       lastUpdated: {
