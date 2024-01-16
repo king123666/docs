@@ -14,8 +14,13 @@ import PageInfo from './components/PageInfo.vue';
 export default {
   extends: DefaultTheme,
 
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+        "doc-before": () => h(PageInfo) // 文章阅读统计
+    });
+  },
+
   enhanceApp({ app , router }) {
-//     DefaultTheme.enhanceApp(ctx);
     if (inBrowser) {
       router.onAfterRouteChanged = () => {
         busuanzi.fetch()
@@ -63,11 +68,5 @@ export default {
         //您可以使用“comment:true”序言在页面上单独启用它
         false
     )
-  },
-
-  Layout() {
-        return h(DefaultTheme.Layout, null, {
-            "doc-before": () => h(PageInfo) // 文章阅读统计
-        });
   },
 }
