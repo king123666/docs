@@ -115,19 +115,34 @@ sudo systemctl restart vsftpd.service
 sudo systemctl status vsftpd.service
 ```
 
-## SFTP
+## 一键安装脚本
 
 ```shell
-# Match Group mysftp 
-# 告诉sshd进程，mysftp用户组中的用户适用下面的限制；
+sudo apt update
+sudo apt install vsftpd
+echo "输入当前用户密码"
+sudo groupadd ftpgroup &> /dev/null
+read -p "输入ftp访问账号:" user
+sudo useradd -g ftpgroup -M -s /bin/bash $user
+echo "输入ftp访问密码"
+sudo passwd $user
 
-# 限制sftp的活动目录在其sftp目录；
-ChrootDirectory /data/sftp  
-# 防止用户执行他们自己自定义的命令，限制用户命令执行上下文为sftp；
-ForceCommand internal-sftp 
-# 禁止X11转发；
-X11Forwarding no 
-# 禁止tcp转发；
-AllowTcpForwarding no 
+sudo sed -ri '/anonymous_enable/d' /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '/no_anon_password/d' /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '/write_enable/d' /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '/anon_upload_enable/d' /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '/anon_mkdir_write_enable/d' /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '/anon_umask/d' /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '/anon_root/d' /etc/vsftpd.conf &> /dev/null
+#sudo sed -ri "/listen_ipv6/aanonymous_enable=YES\nno_anon_password=YES\nanon_root=/srv/ftp/\nwrite_enable=YES\nanon_upload_enable=YES\nanon_mkdir_write_enable=YES\nanon_other_write_enable=YES\nanon_umask=022" /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '/utf8_filesystem/cutf8_filesystem=YES' /etc/vsftpd.conf &> /dev/null
+sudo sed -ri '$a\write_enable=YES\nchroot_local_user=YES' /etc/vsftpd.conf &> /dev/null
+sudo mkdir -p /ftp/ftp/uploads
+sudo usermod -d /ftp/ftp $user
+sudo chown root:ftpgroup /ftp/ftp
+sudo chmod 755 /ftp/ftp
+sudo chown $user:ftpgroup /ftp/ftp/uploads
+sudo chmod 755 /ftp/ftp/uploads
+sudo systemctl restart vsftpd.service
 ```
 

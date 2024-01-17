@@ -50,3 +50,19 @@ sudo apt install tigervnc-viewer
 ```
 
 客户端打开 `tigervnc-viewer`，配置要远程连接服务器地址，点击 `Connect`，输入密码即可。
+
+
+
+##  Wayland环境远程桌面（服务端）：
+
+```shell
+sudo apt install krfb
+```
+
+启动服务服务端密码1：
+
+```shell
+krfb --nodialog --dpwd 1 --upwd 1 --nosharedialog
+```
+
+客户端连接 Wayland 远程桌面需要降低画质，否则很卡。
