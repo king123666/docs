@@ -3,7 +3,7 @@ Author: mikigo
 comment: true
 ---
 
-# Avocado和YouQu对比调研（待评审、完善）
+# Avocado和YouQu对比调研（待评审）
 
 Avocado 是一个基于 Linux 的自动化测试框架，使用 Python 语言编写构建，具有许多特色功能；YouQu 也是基于 Linux 的自动化测试框架，同样也是使用 Python 语言编写构建。
 
