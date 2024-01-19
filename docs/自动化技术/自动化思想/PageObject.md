@@ -1,6 +1,0 @@
----
-Author: mikigo
----
-
-# Page Object
-
