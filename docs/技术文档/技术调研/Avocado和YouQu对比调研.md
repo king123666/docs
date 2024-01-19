@@ -1,5 +1,6 @@
 ---
 Author: mikigo
+comment: true
 ---
 
 # Avocado和YouQu对比调研（待评审、完善）
@@ -293,3 +294,5 @@ Avocado 还支持一些内置插件和三方插件，但插件这块且不提 Yo
 Avocado 主打 Linux CLI 测试这块，底层方法模块在 Linux 内核、命令这块确有独到之处，底层方法基于 Python 与 Linux 进行交互，易于移植，但框架技术架构上没有任何优势；
 
 YouQu 主打在 Linux 操作系统桌面应用 UI、接口自动化这块，添加一些 Linux CLI 相关底层功能很容易，在框架技术架构、 以及各功能方面几乎是**全面碾压 Avocado**。
+
+<!--@include: @/评审意见模板.md-->
