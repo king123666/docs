@@ -10,9 +10,15 @@ hero:
     - theme: brand
       text: 快速浏览
       link: /自动化技术/自动化测试框架/Pytest从入门到起飞
-#    - theme: alt
-#      text: GitHub
-#      link: https://github.com/mikigo/docs
+    - theme: alt
+      text: 投稿指北
+      link: /投稿.md
+    - theme: alt
+      text: 更新记录
+      link: /release.md
+    - theme: alt
+      text: 留言
+      link: /comments.md
   image:
       src: /vitepress-logo-large.webp
       alt: VitePress
@@ -28,6 +34,7 @@ features:
     title: 成长
     details: 拥抱成长的旅程，让热情的阳光照耀我们不断前行的道路。
 ---
+
 <style>
 :root {
   --vp-home-hero-name-color: transparent;
