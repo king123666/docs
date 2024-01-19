@@ -10,12 +10,12 @@ hero:
     - theme: brand
       text: 快速浏览
       link: /自动化技术/自动化测试框架/Pytest从入门到起飞
-    - theme: alt
-      text: 投稿指北
-      link: /投稿.md
-    - theme: alt
+    - theme: brand
       text: 更新记录
       link: /release.md
+    - theme: alt
+      text: 投稿
+      link: /投稿.md
     - theme: alt
       text: 留言
       link: /comments.md
