@@ -2,6 +2,12 @@
 
 ---
 
+::: timeline 2024-01-22
+
+- 新增，自动化技术/自动化思想-[《PageObjects》](/自动化技术/自动化思想/PageObjects)
+
+:::
+
 ::: timeline 2024-01-18
 
 - 新增，技术文档/技术调研-[《Avocado和YouQu对比调研》](/技术文档/技术调研/Avocado和YouQu对比调研)待评审版
