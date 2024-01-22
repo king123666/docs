@@ -81,7 +81,7 @@ YouQu 的测试报告除了 UI 界面好看、信息展示全，还加入了用�
 
 Avocado 自带一个 sysinfo 插件，能自动收集一些系统运行数据，如：cpuinfo、meminfo等；
 
-YouQu 自动一个 `--top` 参数，可以自动收集系统运行时的 top 命令的数据；
+YouQu 自带一个 `--top` 参数，可以自动收集系统运行时的 top 命令的数据；
 
 这个功能可以辅助做测试用例失败分析，但是个人认为自动化框架收集系统数据还是有局限，而使用 Prometheus、Zabbix、Grafana 等专业的监控工具更好。
 
