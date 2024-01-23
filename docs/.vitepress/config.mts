@@ -41,9 +41,9 @@ export default withMermaid(
         { text: '规范文档', link: '/规范文档/流程规范/测试单驱动自动化' },
         { text: '读书笔记', link: '/读书笔记/OpenStack系统架构设计实战' },
         { text: '常见问题', link: '/常见问题/Wayland下sniff报错' },
-        { text: '✌更多', items:[
-            { text: '𓀠留言', link: '/comments' },
-            { text: '📝投稿', link: '/投稿' },
+        { text: '✌ 更多', items:[
+            { text: '💬 留言', link: '/comments' },
+            { text: '📝 投稿', link: '/投稿' },
             { text: '更新记录', link: '/release' },
         ] },
       ],
