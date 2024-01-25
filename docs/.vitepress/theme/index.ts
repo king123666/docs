@@ -52,7 +52,7 @@ export default {
     // giscus配置
     giscusTalk(
         {
-          repo: 'mikigo/funny-docs', //仓库
+          repo: 'mikigo/docs', //仓库
           repoId: 'R_kgDOJjlSqg', //仓库ID
           category: 'Announcements', // 讨论分类
           categoryId: 'DIC_kwDOJjlSqs4CWrT9', //讨论分类ID
